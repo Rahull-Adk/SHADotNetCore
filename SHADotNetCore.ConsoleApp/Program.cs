@@ -6,4 +6,11 @@ AdoDotNet adoDotNet = new AdoDotNet();
 //adoDotNet.Create();
 //adoDotNet.Edit();
 //adoDotNet.Update();
-adoDotNet.Delete();
+//adoDotNet.Delete();
+
+DapperExample dapper = new DapperExample();
+
+//dapper.Read();
+//dapper.Create("MyTitle2", "Rahulladk", "this is my content2");
+//dapper.Update(11, "Hello", "Rahull", "Yes");
+dapper.Delete(11);
