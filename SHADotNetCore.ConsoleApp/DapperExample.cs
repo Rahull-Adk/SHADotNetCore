@@ -18,7 +18,7 @@ namespace SHADotNetCore.ConsoleApp
         {
             using IDbConnection db = new SqlConnection(_connectionString);
             string query = "SELECT * from Tb1_Blog WHERE DeleteFlag = 0;";
-            var list = db.Query<BlogDataModel>(query).ToList();
+            var list = db.Query<BlogDapperDataModel>(query).ToList();
 
             foreach (var item in list)
             {
@@ -56,6 +56,22 @@ namespace SHADotNetCore.ConsoleApp
 
 
 
+        }
+
+        public void Edit(int id)
+        {
+            string query = "SELECT * from [dbo].[Tb1_Blog] WhERE DeleteFlag = 0 and BlogId = @BlogId;";
+            using IDbConnection db = new SqlConnection(_connectionString);
+            var item = db.Query<BlogDapperDataModel>(query, new BlogDapperDataModel { BlogId = id }).FirstOrDefault();
+            if(item is null)
+            {
+                Console.WriteLine("No data found");
+                return;
+            }
+            Console.WriteLine(item.BlogId);
+            Console.WriteLine(item.BlogTitle);
+            Console.WriteLine(item.BlogAuthor);
+            Console.WriteLine(item.BlogContent);
         }
 
         public void Update(int id, string title, string author, string content)
