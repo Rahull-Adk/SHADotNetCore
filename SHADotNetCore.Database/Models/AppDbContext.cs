@@ -17,10 +17,18 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<Tb1Blog> Tb1Blogs { get; set; }
 
+
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
-        => optionsBuilder.UseSqlServer("Server=RAHULL;Database=DotnetTrainingBatch5;User Id=sa;Password=Rahulltheprogrammer06!;TrustServerCertificate=True;");
-
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            string connectionString =
+   "Data Source=RAHULL;Initial Catalog=DotnetTrainingBatch5;User ID=sa;Password=Rahulltheprogrammer06!;TrustServerCertificate=True;";
+            optionsBuilder.UseSqlServer(connectionString);
+        }
+    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Tb1Blog>(entity =>

@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHADotNetCore.Database", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHADotnetCore.ConsoleApp2", "SHADotnetCore.ConsoleApp2\SHADotnetCore.ConsoleApp2.csproj", "{8A2AEC99-B93D-4F49-8D6B-754B80B27893}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHADotNetCore.RestApi", "SHADotNetCore.RestApi\SHADotNetCore.RestApi.csproj", "{1FEBFDD9-0D57-43D2-956E-1C9FDC6C9695}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8A2AEC99-B93D-4F49-8D6B-754B80B27893}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A2AEC99-B93D-4F49-8D6B-754B80B27893}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A2AEC99-B93D-4F49-8D6B-754B80B27893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FEBFDD9-0D57-43D2-956E-1C9FDC6C9695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FEBFDD9-0D57-43D2-956E-1C9FDC6C9695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FEBFDD9-0D57-43D2-956E-1C9FDC6C9695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FEBFDD9-0D57-43D2-956E-1C9FDC6C9695}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

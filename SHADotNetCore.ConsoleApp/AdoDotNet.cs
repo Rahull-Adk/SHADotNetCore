@@ -11,7 +11,7 @@ namespace SHADotNetCore.ConsoleApp
     public class AdoDotNet
     {
         private readonly string _connectionString =
-   "Data Source=RAHULL;Initial Catalog=DotnetTrainingBatch5;User ID=sa;Password=Rahulltheprogrammer06!;";
+   "Data Source=RAHULL;Initial Catalog=DotnetTrainingBatch5;User ID=sa;Password=Rahulltheprogrammer06!;TrustServerCertificate=True;";
         public void Read()
         {
 
