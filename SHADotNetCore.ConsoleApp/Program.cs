@@ -15,7 +15,6 @@ DapperExample dapper = new DapperExample();
 //dapper.Edit(1);
 //dapper.Update(11, "Hello", "Rahull", "Yes");
 //dapper.Delete(11); 
-
 EFCore eFCore = new EFCore();
 //eFCore.Read();
 //eFCore.Edit(12);
