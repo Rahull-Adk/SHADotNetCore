@@ -41,6 +41,8 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.BlogTitle).HasMaxLength(50);
         });
 
+        
+
         OnModelCreatingPartial(modelBuilder);
     }
 
