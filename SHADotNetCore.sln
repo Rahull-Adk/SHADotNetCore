@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHADotNetCore.RestApi", "SH
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHADotNetCore.MinimalApi", "SHADotNetCore.MinimalApi\SHADotNetCore.MinimalApi.csproj", "{EE2D048E-4428-4585-9D7E-1380EA04ACA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHADotNetCore.Birds.MinimalApi", "SHADotNetCore.Birds.MinimalApi\SHADotNetCore.Birds.MinimalApi.csproj", "{F182FABA-AE63-4C41-8666-22A63B48E40F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHADotNetCore.Birds.MinimalApi", "SHADotNetCore.Birds.MinimalApi\SHADotNetCore.Birds.MinimalApi.csproj", "{F182FABA-AE63-4C41-8666-22A63B48E40F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHADotNetCore.ToDoList", "SHADotNetCore.ToDoList\SHADotNetCore.ToDoList.csproj", "{641163C0-412C-4063-AE71-AC0CDC1AD91A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHADotNetCore.Domin", "SHADotNetCore.Domin\SHADotNetCore.Domin.csproj", "{23F322B9-7B9B-4C03-BA40-74F17AE78C54}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHADotNetCore.TodoApp", "SHADotNetCore.TodoApp\SHADotNetCore.TodoApp.csproj", "{D6D58C85-E722-4605-9293-F0501CAABD79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +49,14 @@ Global
 		{F182FABA-AE63-4C41-8666-22A63B48E40F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F182FABA-AE63-4C41-8666-22A63B48E40F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F182FABA-AE63-4C41-8666-22A63B48E40F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{641163C0-412C-4063-AE71-AC0CDC1AD91A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{641163C0-412C-4063-AE71-AC0CDC1AD91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{641163C0-412C-4063-AE71-AC0CDC1AD91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{641163C0-412C-4063-AE71-AC0CDC1AD91A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23F322B9-7B9B-4C03-BA40-74F17AE78C54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23F322B9-7B9B-4C03-BA40-74F17AE78C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23F322B9-7B9B-4C03-BA40-74F17AE78C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23F322B9-7B9B-4C03-BA40-74F17AE78C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D58C85-E722-4605-9293-F0501CAABD79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D58C85-E722-4605-9293-F0501CAABD79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D58C85-E722-4605-9293-F0501CAABD79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D58C85-E722-4605-9293-F0501CAABD79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

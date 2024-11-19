@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SHADotNetCore.Database\SHADotNetCore.Database.csproj" />
+    <ProjectReference Include="..\SHADotNetCore.Domin\SHADotNetCore.Domin.csproj" />
   </ItemGroup>
 
 </Project>

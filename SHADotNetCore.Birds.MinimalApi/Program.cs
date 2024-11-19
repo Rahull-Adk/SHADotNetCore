@@ -40,6 +40,10 @@ app.MapGet("/birds/{id}", (int id) =>
     var jsonStr = File.ReadAllText(filePath);
     var result = JsonConvert.DeserializeObject<BirdResponseModel>(jsonStr)!;
     var item = result.Tbl_Bird.FirstOrDefault(x => x.Id == id);
+    if(item is null)
+    {
+        return Results.NotFound("NO Data found");
+    }
     return Results.Ok(item);
 
 }).WithName("GetBird").WithOpenApi();
@@ -50,12 +54,56 @@ app.MapPost("/birds", (BirdModel requestModel) =>
     var jsonStr = File.ReadAllText(filePath);
     var result = JsonConvert.DeserializeObject<BirdResponseModel>(jsonStr)!;
     requestModel.Id = result.Tbl_Bird.Count == 0 ? 1 : result.Tbl_Bird.Max(x => x.Id) + 1;
+    result.Tbl_Bird.Add(requestModel);
 
     var jsonToWrite = JsonConvert.SerializeObject(result);
     File.WriteAllText(filePath, jsonToWrite);
 
     return Results.Ok(requestModel);
-}).WithName("GetBird").WithOpenApi();
+}).WithName("CreateBird").WithOpenApi();
+
+app.MapPut("/birds/{id}", (int id, BirdModel requestModel) =>
+{
+    string filePath = "Data/Birds.json";
+    var jsonStr = File.ReadAllText(filePath);
+
+    var result = JsonConvert.DeserializeObject<BirdResponseModel>(jsonStr)!;
+
+    var item = result.Tbl_Bird.FirstOrDefault(x => x.Id == id);
+    if(item is null)
+    {
+        return Results.NotFound("No Data found");
+    }
+    item.Description = requestModel.Description;
+    item.BirdEnglishName = requestModel.BirdEnglishName;
+    item.BirdMyanmarName = requestModel.BirdMyanmarName;
+    item.ImagePath = requestModel.ImagePath;
+
+    var jsonToWrite = JsonConvert.SerializeObject(result);
+    File.WriteAllText(filePath, jsonToWrite);
+    return Results.Ok(item);
+
+}).WithName("UpdateBird").WithOpenApi();
+
+app.MapDelete("/birds/{id}", (int id) =>
+{
+    var filePath = "Data/Birds.json";
+    var jsonStr = File.ReadAllText(filePath)!;
+    var result = JsonConvert.DeserializeObject<BirdResponseModel>(jsonStr)!;
+
+    var item = result.Tbl_Bird.FirstOrDefault(x => x.Id == id);
+    if (item is null)
+    {
+        return Results.NotFound("No Data Found");
+    }
+
+    result.Tbl_Bird.Remove(item);
+
+    var strToJson = JsonConvert.SerializeObject(result, Formatting.Indented);
+    File.WriteAllText(filePath, strToJson);
+    return Results.Ok("Item deleted successfully");
+
+}).WithName("DeleteBird").WithOpenApi();
 
 app.Run();
 
