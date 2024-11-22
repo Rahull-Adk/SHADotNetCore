@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SHADotNetCore.TodoApp.Model;
-using System.Runtime.CompilerServices;
+
 
 namespace SHADotNetCore.TodoApp.Endpoints
 {
