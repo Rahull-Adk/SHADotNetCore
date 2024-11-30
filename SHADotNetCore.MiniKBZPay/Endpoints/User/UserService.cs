@@ -71,7 +71,8 @@ public class UserService
         return "Account Deleted Successfully";
     }
 
-    public async Task<List<Receipt>> TransactionHistory(int id, AppDbContext _db, int limit = 10) {
+    public async Task<List<Receipt>> TransactionHistory(int id, AppDbContext _db, int limit = 10)
+    {
         var user = await _db.Users.Include(x => x.receipts).FirstOrDefaultAsync(x => x.UserId == id);
         if (user is null)
         {

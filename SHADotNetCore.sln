@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SHADotNetCore.TodoApp", "SH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHADotNetCore.MiniKBZPay", "SHADotNetCore.MiniKBZPay\SHADotNetCore.MiniKBZPay.csproj", "{BD5631CA-2CB5-4274-8D64-BC36841BE233}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHADotNetCore.ConsoleApp3", "SHADotNetCore.ConsoleApp3\SHADotNetCore.ConsoleApp3.csproj", "{EEB20748-01A3-4F54-A9D6-B49A0F55C81E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{BD5631CA-2CB5-4274-8D64-BC36841BE233}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD5631CA-2CB5-4274-8D64-BC36841BE233}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD5631CA-2CB5-4274-8D64-BC36841BE233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB20748-01A3-4F54-A9D6-B49A0F55C81E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB20748-01A3-4F54-A9D6-B49A0F55C81E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB20748-01A3-4F54-A9D6-B49A0F55C81E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB20748-01A3-4F54-A9D6-B49A0F55C81E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
